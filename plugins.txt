@@ -1,2 +1,4 @@
 kubernetes:4110.v2d7ceb_d59c53
+workflow-aggregator:596.v8c21c963d92d
+configuration-as-code:1714.v09593e830cfa
 git:5.2.0
