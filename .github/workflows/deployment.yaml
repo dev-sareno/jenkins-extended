@@ -17,10 +17,8 @@ jobs:
         with:
           username: devsareno
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Create short SHA
-        run: SHA="${{ github.sha }}" && export SHORT_SHA="${SHA::7}"
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: devsareno/jenkins-extended:latest,devsareno/jenkins-extended:$SHORT_SHA
+          tags: devsareno/jenkins-extended:latest,devsareno/jenkins-extended:${{ github.sha }}
